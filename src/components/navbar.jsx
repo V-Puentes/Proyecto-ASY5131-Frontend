@@ -1,16 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ShoppingCart, Search, User } from 'lucide-react';
+import { DataContext } from '../context/DataProvider.jsx';
+import { ShoppingCart, Search, User } from 'lucide-react';
+import CarritoModal from './../components/carritoModal.jsx'; // Asegúrate de importar el modal
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCarritoOpen, setIsCarritoOpen] = useState(false);
+  const { carrito, setCarrito } = useContext(DataContext);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const toggleCarrito = () => {
+    setIsCarritoOpen(!isCarritoOpen);
+  };
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-indigo-900 fixed-top w-100 shadow-lg">
+    <nav 
+      className="navbar navbar-expand-lg navbar-dark fixed-top w-100 shadow-lg" 
+      style={{ backgroundColor: '#4f46e5' }}
+    >
       <div className="container-fluid">
         {/* Logo y título */}
         <Link to="/" className="navbar-brand d-flex align-items-center">
@@ -40,42 +51,41 @@ const Navbar = () => {
         <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link to="/" className="nav-link text-black">Inicio</Link>
+              <Link to="/" className="nav-link text-white">Inicio</Link>
             </li>
             <li className="nav-item">
-              <Link to="/pokemon" className="nav-link text-black">Pokémon</Link>
+              <Link to="/pokemon" className="nav-link text-white">Pokémon</Link>
             </li>
             <li className="nav-item">
-              <Link to="/yugioh" className="nav-link text-black">Yu-Gi-Oh!</Link>
+              <Link to="/yugioh" className="nav-link text-white">Yu-Gi-Oh!</Link>
             </li>
             <li className="nav-item">
-              <Link to="/magic" className="nav-link text-black">Magic</Link>
+              <Link to="/magic" className="nav-link text-white">Magic</Link>
             </li>
             <li className="nav-item">
-              <Link to="/ofertas" className="nav-link text-black">Ofertas</Link>
+              <Link to="/ofertas" className="nav-link text-white">Ofertas</Link>
             </li>
             <li className="nav-item">
-              <Link to="/contacto" className="nav-link text-black">Contacto</Link>
+              <Link to="/contacto" className="nav-link text-white">Contacto</Link>
             </li>
           </ul>
 
           {/* Iconos de acción en escritorio */}
           <div className="d-flex align-items-center ms-4">
-            <button className="btn text-black me-3">
-              <Search size={20} />
-            </button>
-            <Link to="/carrito" className="btn text-black position-relative me-3">
+            <button onClick={toggleCarrito} className="btn text-white position-relative me-3">
               <ShoppingCart size={20} />
-              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-teal-500 text-white">
-                3
-              </span>
-            </Link>
-            <Link to="/cuenta" className="btn text-black">
-              <User size={20} />
-            </Link>
+              {carrito.length > 0 && (
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {carrito.length}
+                </span>
+              )}
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Modal del Carrito */}
+      <CarritoModal isOpen={isCarritoOpen} onClose={toggleCarrito} />
     </nav>
   );
 };

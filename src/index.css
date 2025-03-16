@@ -1,68 +1,114 @@
+/* Personalización de colores fríos para Bootstrap */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  --primary: #1a3a8f;
+  --secondary: #4b5d8b;
+  --pastel-blue: #94bff0;
+  --light-blue: #e8f0ff;
+  --cyan: #5bc0de;
+  --blue-gray: #6c757d;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f8fafc;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Personalización de Bootstrap */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.btn-primary:hover {
+  background-color: #0e2d6e;
+  border-color: #0e2d6e;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+/* Estilos para cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Banner principal */
+.banner-hero {
+  background: linear-gradient(135deg, #1a3a8f 0%, #4b5d8b 100%);
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 30px;
+}
+
+/* Categorías destacadas */
+.card.bg-gradient {
+  background-size: 200% 200%;
+  transition: all 0.3s ease;
+}
+
+.card.bg-gradient:hover {
+  background-position: right center;
+}
+
+/* Estilos para la navegación de categorías */
+.btn-group .btn {
+  border-radius: 20px;
+  padding: 8px 16px;
+}
+
+/* Badge personalizado */
+.badge.bg-primary {
+  background-color: var(--primary) !important;
+  text-transform: capitalize;
+}
+
+/* Formato para los precios */
+.fw-bold {
+  color: var(--primary);
+}
+.fw-bold-titulohome {
+  color: var(--pastel-blue);
+}
+
+/* Personalización del footer */
+footer {
+  background-color: var(--pastel-blue);
+  color: white;
+}
+
+/* Animación para el loader */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
   }
-  a:hover {
-    color: #747bff;
+  50% {
+    transform: scale(1);
+    opacity: 1;
   }
-  button {
-    background-color: #f9f9f9;
+  100% {
+    transform: scale(0.95);
+    opacity: 0.7;
   }
 }
