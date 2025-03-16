@@ -17,9 +17,13 @@ const Navbar = () => {
     setIsCarritoOpen(!isCarritoOpen);
   };
 
+  // Obtener la cantidad total de productos en el carrito
+  const totalItemsInCart = carrito.reduce((total, item) => total + item.cantidad, 0);
+
+
   return (
     <nav 
-      className="navbar navbar-expand-lg navbar-dark fixed-top w-100 shadow-lg" 
+      className="navbar navbar-expand-lg navbar-dark w-100 shadow-lg" 
       style={{ backgroundColor: '#4f46e5' }}
     >
       <div className="container-fluid">
@@ -30,7 +34,6 @@ const Navbar = () => {
             alt="TCG Store Logo" 
             className="h-10 w-10 mr-2" 
           />
-          <span className="text-white font-bold text-xl">TCG Universe</span>
         </Link>
 
         {/* Botón de menú para móviles */}
@@ -74,9 +77,9 @@ const Navbar = () => {
           <div className="d-flex align-items-center ms-4">
             <button onClick={toggleCarrito} className="btn text-white position-relative me-3">
               <ShoppingCart size={20} />
-              {carrito.length > 0 && (
+              {totalItemsInCart > 0 && (
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  {carrito.length}
+                  {totalItemsInCart}
                 </span>
               )}
             </button>

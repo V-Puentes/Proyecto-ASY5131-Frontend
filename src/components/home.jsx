@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import { DataContext } from '../context/DataProvider.jsx';
-
+import BannerHero from './bannerHero';
 
 const HomePage = () => {
   const [productos, setProductos] = useState([]);
@@ -67,25 +67,15 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
-      {/* Banner principal */}
-      <div className="banner-hero bg-primary text-white py-5" style={{ backgroundColor: '#1a2a4a' }}>
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-md-6">
-              <h1 className="display-4 fw-bold-titulohome">Pocket Center</h1>
-              <p className="lead">Tu tienda especializada en cartas coleccionables de Pokémon, Yu-Gi-Oh!, Magic y más.</p>
-              <button className="btn btn-light btn-lg">Ver ofertas</button>
-            </div>
-            <div className="col-md-6 text-center">
-              <img 
-                src="/api/placeholder/500/300" 
-                alt="Cartas coleccionables" 
-                className="img-fluid rounded shadow-lg" 
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+
+      {/* Banner Hero */}
+      <BannerHero 
+      title="Pocket Center"
+      description="Tu tienda especializada en cartas coleccionables de Pokémon, Yu-Gi-Oh!, Magic y más."
+      imageUrl="/api/placeholder/500/300"
+      imageAlt="Cartas coleccionables"
+    />
+      
 
       {/* Sección de búsqueda y filtros */}
       <div className="container mt-5">
