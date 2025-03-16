@@ -56,7 +56,7 @@ const HomePage = () => {
   };
 
   // Productos a mostrar según filtros
-  const productosMostrados = busqueda 
+  const productosMostrados = busqueda
     ? productos.filter(p => p.nombre.toLowerCase().includes(busqueda.toLowerCase()))
     : (franquiciasFiltradas.length > 0 ? franquiciasFiltradas : productos);
 
@@ -69,13 +69,13 @@ const HomePage = () => {
     <div className="home-page">
 
       {/* Banner Hero */}
-      <BannerHero 
-      title="Pocket Center"
-      description="Tu tienda especializada en cartas coleccionables de Pokémon, Yu-Gi-Oh!, Magic y más."
-      imageUrl="/api/placeholder/500/300"
-      imageAlt="Cartas coleccionables"
-    />
-      
+      <BannerHero
+        title="Pocket Center"
+        description="Tu tienda especializada en cartas coleccionables de Pokémon, Yu-Gi-Oh!, Magic y más."
+        imageUrl="/api/placeholder/500/300"
+        imageAlt="Cartas coleccionables"
+      />
+
 
       {/* Sección de búsqueda y filtros */}
       <div className="container mt-5">
@@ -85,10 +85,10 @@ const HomePage = () => {
           </div>
           <div className="col-md-6">
             <div className="input-group">
-              <input 
-                type="text" 
-                className="form-control" 
-                placeholder="Buscar productos..." 
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Buscar productos..."
                 value={busqueda}
                 onChange={handleBusqueda}
               />
@@ -103,31 +103,31 @@ const HomePage = () => {
         <div className="row mb-4">
           <div className="col-12">
             <div className="d-flex flex-wrap gap-2">
-              <button 
+              <button
                 className={`btn ${filtroActivo === 'todos' ? 'btn-primary' : 'btn-outline-primary'}`}
                 onClick={() => filtrarProductos('todos')}
               >
                 Todos
               </button>
-              <button 
+              <button
                 className={`btn ${filtroActivo === 'pokemon' ? 'btn-primary' : 'btn-outline-primary'}`}
                 onClick={() => filtrarProductos('pokemon')}
               >
                 Pokémon
               </button>
-              <button 
+              <button
                 className={`btn ${filtroActivo === 'yugioh' ? 'btn-primary' : 'btn-outline-primary'}`}
                 onClick={() => filtrarProductos('yugioh')}
               >
                 Yu-Gi-Oh!
               </button>
-              <button 
+              <button
                 className={`btn ${filtroActivo === 'magic' ? 'btn-primary' : 'btn-outline-primary'}`}
                 onClick={() => filtrarProductos('magic')}
               >
                 Magic: The Gathering
               </button>
-              <button 
+              <button
                 className={`btn ${filtroActivo === 'ofertas' ? 'btn-danger' : 'btn-outline-danger'}`}
                 onClick={() => filtrarProductos('ofertas')}
               >
@@ -154,9 +154,9 @@ const HomePage = () => {
                       Oferta
                     </div>
                   )}
-                  <img 
-                    src="/api/placeholder/300/300" 
-                    className="card-img-top p-3" 
+                  <img
+                    src={producto.foto}
+                    className="card-img-top p-3"
                     alt={producto.nombre}
                   />
                   <div className="card-body">
@@ -165,12 +165,12 @@ const HomePage = () => {
                     <p className="card-text small text-muted">{producto.descripcion}</p>
                     <div className="d-flex justify-content-between align-items-center">
                       <span className="fs-5 fw-bold">{formatearPrecio(producto.precio)}</span>
-                      <button 
-  className="btn btn-outline-primary btn-sm" 
-  onClick={() => añadirAlCarrito(producto)}
->
-  Añadir al carrito
-</button>
+                      <button
+                        className="btn btn-outline-primary btn-sm"
+                        onClick={() => añadirAlCarrito(producto)}
+                      >
+                        Añadir al carrito
+                      </button>
                     </div>
                   </div>
                 </div>

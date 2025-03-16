@@ -11,8 +11,8 @@ const BannerHero = ({ title, description, imageUrl, imageAlt }) => {
           </div>
           <div className="col-md-6 text-center">
             <img 
-              src={imageUrl} 
-              alt={imageAlt} 
+              src='./public/assets/png/portada.png'
+              alt='portada'
               className="img-fluid rounded shadow-lg" 
             />
           </div>

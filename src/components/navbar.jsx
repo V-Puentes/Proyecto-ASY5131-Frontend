@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { DataContext } from '../context/DataProvider.jsx';
 import { ShoppingCart, Search, User } from 'lucide-react';
-import CarritoModal from './../components/carritoModal.jsx'; // Asegúrate de importar el modal
+import CarritoModal from './../components/carritoModal.jsx'; 
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +17,6 @@ const Navbar = () => {
     setIsCarritoOpen(!isCarritoOpen);
   };
 
-  // Obtener la cantidad total de productos en el carrito
   const totalItemsInCart = carrito.reduce((total, item) => total + item.cantidad, 0);
 
 

@@ -38,7 +38,6 @@ const CarritoModal = ({ isOpen, onClose }) => {
                     </div>
                     <span className="badge bg-primary rounded-pill">{item.cantidad}</span>
                     <button onClick={() => eliminarProducto(item.id)} className="btn btn-sm btn-outline-danger">
-                      <i className="bi bi-trash"></i> {/* Ícono de basurero */}
                     </button>
                   </div>
                 ))}
@@ -57,7 +56,7 @@ const CarritoModal = ({ isOpen, onClose }) => {
             {carrito.length > 0 && (
               <button className="btn btn-success" onClick={() => { 
                 onClose(); 
-                navigate("/pagos"); // Navega a la página de pago
+                navigate("/pagos"); 
               }}>
                 <i className="bi bi-check-circle"></i> Proceder al Pago
               </button>
