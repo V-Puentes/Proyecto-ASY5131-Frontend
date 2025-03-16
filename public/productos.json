@@ -1,0 +1,161 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Sobre de Cartas Pokémon - Scarlet & Violet",
+            "descripcion": "Un sobre de cartas de la última expansión de Pokémon TCG.",
+            "precio": 4.99,
+            "foto": "https://example.com/pokemon_sobre.jpg",
+            "oferta": true
+        },
+        {
+            "id": 2,
+            "nombre": "Deck de Inicio Yu-Gi-Oh! - Dark Magician",
+            "descripcion": "Un mazo de inicio basado en el legendario Mago Oscuro.",
+            "precio": 9.99,
+            "foto": "https://example.com/yugioh_dark_magician.jpg"
+        },
+        {
+            "id": 3,
+            "nombre": "Booster Pack Magic: The Gathering - March of the Machine",
+            "descripcion": "Sobre de cartas de la última edición de Magic: The Gathering.",
+            "precio": 5.99,
+            "foto": "https://example.com/magic_booster.jpg",
+            "oferta": true
+        },
+        {
+            "id": 4,
+            "nombre": "Fundas para Cartas - Ultra Pro",
+            "descripcion": "Pack de 100 fundas protectoras para cartas de tamaño estándar.",
+            "precio": 3.99,
+            "foto": "https://example.com/fundas_ultrapro.jpg"
+        },
+        {
+            "id": 5,
+            "nombre": "Caja de Almacenamiento Pokémon",
+            "descripcion": "Caja de almacenamiento con arte de Pokémon para proteger tus cartas.",
+            "precio": 12.99,
+            "foto": "https://example.com/caja_pokemon.jpg",
+            "oferta": true
+        },
+        {
+            "id": 6,
+            "nombre": "Tapete de Juego Yu-Gi-Oh! - Kaiba",
+            "descripcion": "Tapete oficial de Yu-Gi-Oh! con diseño de Seto Kaiba.",
+            "precio": 15.99,
+            "foto": "https://example.com/tapete_kaiba.jpg"
+        },
+        {
+            "id": 7,
+            "nombre": "Booster Box Pokémon - Brilliant Stars",
+            "descripcion": "Caja con 36 sobres de la expansión Brilliant Stars de Pokémon TCG.",
+            "precio": 129.99,
+            "foto": "https://example.com/pokemon_brilliant_stars.jpg",
+            "oferta": true
+        },
+        {
+            "id": 8,
+            "nombre": "Estructura de Mazo Yu-Gi-Oh! - Cyber Strike",
+            "descripcion": "Mazo estructurado de Yu-Gi-Oh! con temática de Cyber Dragón.",
+            "precio": 14.99,
+            "foto": "https://example.com/yugioh_cyber_strike.jpg"
+        },
+        {
+            "id": 9,
+            "nombre": "Commander Deck Magic: The Gathering - Eldrazi Unbound",
+            "descripcion": "Mazo de Commander con cartas temáticas de Eldrazi.",
+            "precio": 39.99,
+            "foto": "https://example.com/magic_commander_eldrazi.jpg",
+            "oferta": true
+        },
+        {
+            "id": 10,
+            "nombre": "Dado Contador de Vida D20 - Magic: The Gathering",
+            "descripcion": "Dado de 20 caras para llevar el conteo de vida en Magic.",
+            "precio": 2.99,
+            "foto": "https://example.com/magic_d20.jpg"
+        },
+        {
+            "id": 11,
+            "nombre": "Álbum Coleccionador Pokémon - Pikachu",
+            "descripcion": "Álbum de colección con diseño de Pikachu para almacenar cartas.",
+            "precio": 17.99,
+            "foto": "https://example.com/pokemon_album_pikachu.jpg",
+            "oferta": true
+        },
+        {
+            "id": 12,
+            "nombre": "Lata de Cartas Yu-Gi-Oh! - 2023 Tin of the Pharaoh's Gods",
+            "descripcion": "Lata coleccionable con sobres y cartas exclusivas.",
+            "precio": 19.99,
+            "foto": "https://example.com/yugioh_tin_2023.jpg"
+        },
+        {
+            "id": 13,
+            "nombre": "Pack de Energías Pokémon",
+            "descripcion": "Pack con 50 cartas de energía de Pokémon TCG.",
+            "precio": 5.49,
+            "foto": "https://example.com/pokemon_energias.jpg"
+        },
+        {
+            "id": 14,
+            "nombre": "Playmat Magic: The Gathering - Liliana Vess",
+            "descripcion": "Tapete de juego con arte de Liliana Vess para Magic: The Gathering.",
+            "precio": 19.99,
+            "foto": "https://example.com/magic_playmat_liliana.jpg",
+            "oferta": true
+        },
+        {
+            "id": 15,
+            "nombre": "Cartas Coleccionables de Promoción Yu-Gi-Oh!",
+            "descripcion": "Set especial de cartas promocionales de Yu-Gi-Oh!.",
+            "precio": 24.99,
+            "foto": "https://example.com/yugioh_promo_set.jpg"
+        },
+        {
+            "id": 16,
+            "nombre": "Caja de Entrenador Élite Pokémon - Paldea Evolved",
+            "descripcion": "Caja con 8 sobres, fundas y accesorios de la expansión Paldea Evolved.",
+            "precio": 49.99,
+            "foto": "https://example.com/pokemon_paldea_evolved.jpg",
+            "oferta": true
+        },
+        {
+            "id": 17,
+            "nombre": "Booster Box Yu-Gi-Oh! - Maze of Memories",
+            "descripcion": "Caja con 24 sobres de la expansión Maze of Memories.",
+            "precio": 89.99,
+            "foto": "https://example.com/yugioh_maze_memories.jpg"
+        },
+        {
+            "id": 18,
+            "nombre": "Deck de Commander Magic - Planeswalker Teferi",
+            "descripcion": "Mazo preconstruido de Commander centrado en Teferi.",
+            "precio": 42.99,
+            "foto": "https://example.com/magic_teferi.jpg",
+            "oferta": true
+        },
+        {
+            "id": 19,
+            "nombre": "Set de Dados Yu-Gi-Oh!",
+            "descripcion": "Set de dados con símbolos icónicos de Yu-Gi-Oh!.",
+            "precio": 9.99,
+            "foto": "https://example.com/yugioh_dados.jpg"
+        },
+        {
+            "id": 20,
+            "nombre": "Tapete de Juego Pokémon - Charizard Gigamax",
+            "descripcion": "Tapete oficial con diseño de Charizard Gigamax.",
+            "precio": 21.99,
+            "foto": "https://example.com/pokemon_tapete_charizard.jpg",
+            "oferta": true
+        },
+        {
+            "id": 21,
+            "nombre": "Fundas para Cartas - Dragon Shield Matte Black",
+            "descripcion": "Pack de 100 fundas premium para cartas.",
+            "precio": 11.99,
+            "foto": "https://example.com/dragon_shield_black.jpg"
+        }
+    ]
+}
