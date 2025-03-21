@@ -11,9 +11,11 @@ const BannerHero = ({ title, description, imageUrl, imageAlt }) => {
           </div>
           <div className="col-md-6 text-center">
             <img 
-              src='/assets/png/portada.png'
+              src='/assets/png/logoRocket2.png'
               alt='portada'
-              className="img-fluid rounded shadow-lg" 
+              className="img-fluid rounded shadow-lg"
+              height="300"
+              width="300"  
             />
           </div>
         </div>
