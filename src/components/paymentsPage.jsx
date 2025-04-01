@@ -3,7 +3,7 @@ import { DataContext } from '../context/DataProvider.jsx';
 import { User, MapPin, CreditCard, ShoppingCart, Trash2, CheckCircle } from 'lucide-react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from "react-router-dom";
-import PayPalCheckout from './payPalCheckout';
+import PayPalCheckout from './payPalcheckout';
 
 const PaymentPage = () => {
   const { carrito, total, vaciarCarrito } = useContext(DataContext);
