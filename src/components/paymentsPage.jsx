@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from "react-router-dom";
 import PayPalCheckout from './payPalCheckout';
 
-
 const PaymentPage = () => {
   const { carrito, total, vaciarCarrito } = useContext(DataContext);
   const navigate = useNavigate();
@@ -76,7 +75,7 @@ const PaymentPage = () => {
                 <CreditCard className="me-2" size={20} />
                 Detalles de Pago
               </h3>
-              <PayPalCheckout />
+              
             </div>
           </div>
         </div>
