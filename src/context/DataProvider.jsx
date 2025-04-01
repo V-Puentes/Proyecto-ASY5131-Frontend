@@ -13,8 +13,8 @@ export const DataProvider = ({ children }) => {
 
   // Función para vaciar el carrito
   const vaciarCarrito = () => {
-    setCarrito([]); // Establece el carrito como un array vacío
-    localStorage.removeItem('cart'); // Limpia el carrito en localStorage
+    setCarrito([]); 
+    localStorage.removeItem('cart'); 
   };
 
   // Función para eliminar un producto específico
@@ -22,7 +22,7 @@ const eliminarProducto = (id) => {
   setCarrito((prevCarrito) => {
     const nuevoCarrito = prevCarrito.map((item) =>
       item.id === id ? { ...item, cantidad: item.cantidad - 1 } : item
-    ).filter(item => item.cantidad > 0); // Filtra los que tienen cantidad 0
+    ).filter(item => item.cantidad > 0); 
 
     localStorage.setItem('cart', JSON.stringify(nuevoCarrito));
     return nuevoCarrito;

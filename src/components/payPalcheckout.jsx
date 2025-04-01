@@ -11,7 +11,7 @@ export default function PayPalButton({ amount = 100.00, onSuccess, onError }) {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            amount: amount // Envía el monto al backend
+            amount: amount 
           })
         }
       );
@@ -24,7 +24,7 @@ export default function PayPalButton({ amount = 100.00, onSuccess, onError }) {
       return order.id;
     } catch (err) {
       onError(err);
-      throw err; // Importante: relanzar el error para que PayPal lo maneje
+      throw err;
     }
   };
 

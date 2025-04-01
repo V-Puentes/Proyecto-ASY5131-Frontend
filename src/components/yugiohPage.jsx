@@ -17,7 +17,7 @@ const YugiohProducts = () => {
     };
 
     useEffect(() => {
-        fetch('/productos.json') // Asegúrate de cambiar la ruta si es necesario
+        fetch('/productos.json') 
             .then(response => response.json())
             .then(data => {
                 const filteredProducts = data.productos.filter(product => product.franquicia === 'yugioh');

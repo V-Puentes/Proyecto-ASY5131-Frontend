@@ -19,8 +19,6 @@ const CarritoModal = ({ isOpen, onClose }) => {
             </h5>
             <button type="button" className="btn-close btn-close-white" onClick={onClose} aria-label="Close"></button>
           </div>
-
-          {/* Se añade scroll en la modal-body */}
           <div className="modal-body" style={{ maxHeight: '400px', overflowY: 'auto' }}>
             {carrito.length === 0 ? (
               <div className="text-center py-4">

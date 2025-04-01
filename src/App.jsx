@@ -20,7 +20,6 @@ function App() {
         <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
             <Route path="/contacto" element={<Contact />} />
             <Route path="/pokemon" element={<PagePokemon />} />
             <Route path="/yugioh" element={<PageYugioh />} />
