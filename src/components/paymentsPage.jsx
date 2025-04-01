@@ -75,7 +75,7 @@ const PaymentPage = () => {
                 <CreditCard className="me-2" size={20} />
                 Detalles de Pago
               </h3>
-              
+              <PayPalCheckout />
             </div>
           </div>
         </div>
