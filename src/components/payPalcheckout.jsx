@@ -4,7 +4,7 @@ export default function PayPalButton({ amount = 100.00, onSuccess, onError }) {
   const createOrder = async () => {
     try {
       const response = await fetch(
-        'https://pocketcenter-backend.vercel.app/create-order',
+        'https://pocketcenter-backend.vercel.app/api/paypal/create-order',
         {
           method: 'POST',
           headers: {
@@ -31,7 +31,7 @@ export default function PayPalButton({ amount = 100.00, onSuccess, onError }) {
   const onApprove = async (data, actions) => {
     try {
       const response = await fetch(
-        'https://pocketcenter-backend.vercel.app/capture-order',
+        'https://pocketcenter-backend.vercel.app/api/paypal/capture-order',
         {
           method: 'POST',
           headers: {
