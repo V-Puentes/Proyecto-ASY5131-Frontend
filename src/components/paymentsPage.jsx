@@ -3,6 +3,8 @@ import { DataContext } from '../context/DataProvider.jsx';
 import { User, MapPin, CreditCard, ShoppingCart, Trash2, CheckCircle } from 'lucide-react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from "react-router-dom";
+import PayPalCheckout from './payPalCheckout';
+
 
 const PaymentPage = () => {
   const { carrito, total, vaciarCarrito } = useContext(DataContext);
@@ -74,22 +76,7 @@ const PaymentPage = () => {
                 <CreditCard className="me-2" size={20} />
                 Detalles de Pago
               </h3>
-              <form>
-                <div className="mb-3">
-                  <label htmlFor="tarjeta" className="form-label">Número de Tarjeta</label>
-                  <input type="text" className="form-control" id="tarjeta" placeholder="1234 5678 9012 3456" required />
-                </div>
-                <div className="row">
-                  <div className="col-md-6 mb-3">
-                    <label htmlFor="fechaExpiracion" className="form-label">Fecha de Expiración</label>
-                    <input type="text" className="form-control" id="fechaExpiracion" placeholder="MM/AA" required />
-                  </div>
-                  <div className="col-md-6 mb-3">
-                    <label htmlFor="cvv" className="form-label">CVV</label>
-                    <input type="text" className="form-control" id="cvv" placeholder="123" required />
-                  </div>
-                </div>
-              </form>
+              <PayPalCheckout />
             </div>
           </div>
         </div>
