@@ -42,16 +42,17 @@ const MagicPage = () => {
           <div key={product.id} className="col">
             <div className="card h-100 shadow-sm">
               <div className="ratio ratio-4x3">
-                <img
-                  src={product.foto}
-                  className="card-img-top p-2"
-                  alt={product.nombre}
-                  style={{ objectFit: 'contain' }}
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = '/images/placeholder.jpg';
-                  }}
-                />
+                {product.foto && (
+                  <img
+                    src={product.foto}
+                    className="card-img-top p-2"
+                    alt={product.nombre}
+                    style={{ objectFit: 'contain' }}
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                )}
               </div>
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{product.nombre}</h5>

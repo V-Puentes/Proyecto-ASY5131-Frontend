@@ -2,14 +2,13 @@ import React, { createContext, useState, useEffect } from "react";
 
 export const DataContext = createContext();
 
-// Datos de ejemplo integrados
+// Datos de ejemplo sin imágenes
 const DEFAULT_PRODUCTS = [
   {
     id: 1,
     nombre: "Mazo Inicial Magic",
     franquicia: "magic",
     precio: 19990,
-    foto: "/assets/jpg/1-Sobre de Cartas Pokémon Scarlet y Violet.jpg",
     descripcion: "Mazo introductorio para nuevos jugadores"
   },
   {
@@ -17,7 +16,6 @@ const DEFAULT_PRODUCTS = [
     nombre: "Expansión Throne of Eldraine",
     franquicia: "magic",
     precio: 24990,
-    foto: "/assets/jpg/1-Sobre de Cartas Pokémon Scarlet y Violet.jpg",
     descripcion: "Nueva expansión de Magic"
   }
 ];
@@ -77,20 +75,20 @@ export const DataProvider = ({ children }) => {
   const normalizeProducts = (products) => {
     return products.map(p => ({
       ...p,
-      foto: normalizeImageUrl(p.foto),
+      // Solo incluye la propiedad 'foto' si existe en los datos originales
+      ...(p.foto && { foto: normalizeImageUrl(p.foto) }),
       precio: Number(p.precio) || 0,
       franquicia: p.franquicia?.toLowerCase() || 'otros'
     }));
   };
 
   const normalizeImageUrl = (imgUrl) => {
-    if (!imgUrl) return '/assets/vite.svg';
+    if (!imgUrl) return null; // Devuelve null si no hay URL
     if (imgUrl.startsWith('http')) return imgUrl;
     if (imgUrl.startsWith('/')) return imgUrl;
     return `/images/${imgUrl}`;
   };
 
-  // Resto de las funciones del carrito...
   const total = carrito.reduce((acc, item) => acc + (item.precio * item.cantidad), 0);
 
   const añadirAlCarrito = (producto) => {
