@@ -10,6 +10,7 @@ const HomePage = () => {
   const [filtroActivo, setFiltroActivo] = useState('todos');
   const [loading, setLoading] = useState(true);
   const [busqueda, setBusqueda] = useState('');
+  const [error, setError] = useState(null);
   const { carrito, setCarrito } = useContext(DataContext);
 
   const añadirAlCarrito = (producto) => {
@@ -24,19 +25,38 @@ const HomePage = () => {
   };
 
   useEffect(() => {
-    // Cargar los datos del JSON
-    fetch('/productos.json')
-      .then(response => response.json())
-      .then(data => {
-        setProductos(data.productos);
+    const fetchProductos = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        
+        const response = await fetch('https://pocketcenter-backend.vercel.app/api/productos');
+        
+        if (!response.ok) {
+          throw new Error(`Error HTTP: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        
+        // Procesamiento simple de imágenes
+        const productosCorregidos = data.map(producto => ({
+          ...producto,
+          foto: producto.foto?.startsWith('http') 
+            ? producto.foto 
+            : 'https://via.placeholder.com/300?text=Imagen+no+disponible'
+        }));
+        
+        setProductos(productosCorregidos);
+      } catch (error) {
+        console.error('Error al cargar productos:', error);
+        setError(error.message || "Error al cargar los productos");
+      } finally {
         setLoading(false);
-      })
-      .catch(error => {
-        console.error('Error al cargar los datos:', error);
-        setLoading(false);
-      });
+      }
+    };
+  
+    fetchProductos();
   }, []);
-
   // Filtrar productos por franquicia
   const filtrarProductos = (franquicia) => {
     setFiltroActivo(franquicia);
@@ -75,7 +95,19 @@ const HomePage = () => {
         imageUrl="/api/placeholder/500/300"
         imageAlt="Cartas coleccionables"
       />
-
+{error && (
+  <div className="container mt-3">
+    <div className="alert alert-danger">
+      <strong>Error:</strong> {error}
+      <button 
+        className="btn btn-sm btn-outline-danger ms-2"
+        onClick={() => setError(null)}
+      >
+        Cerrar
+      </button>
+    </div>
+  </div>
+)}
 
       {/* Sección de búsqueda y filtros */}
       <div className="container mt-5">
