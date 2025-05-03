@@ -1,43 +1,33 @@
 
 # Pocket Center FrontEnd
 
-En este repositorio se encuentra la descripción del proyecto "Pocket Center Webstore" para el ramo de Integración de Plataformas, este proyecto corresponde a un e-commerce con la finalidad  de digitalizar la pyme "Pocket Center"
-
-
+En este repositorio se encuentra la descripción del proyecto "Pocket Center Webstore" para el ramo de Integración de Plataformas, este proyecto corresponde a un e-commerce con la finalidad de digitalizar la pyme "Pocket Center"
 
 ## Herramientas
 
-Las herramients utilizadas para el desarrollo de esta página web fueron las siguientes
+Las herramientas utilizadas para el desarrollo de esta página web fueron las siguientes
 
 ### Tecnologias:
 En este proyecto se hace uso de las siguientes técnologias:
--HTML: Lenguaje de marcado utilizado para definir la estructura del codigo
--CSS: Lenguaje de estilos utilizado para el apartado visual presentes en el codigo
--Javascript: Lenguaje de programación utilizado para funciones y logica del proyecto
--Json: formato de datos, permite manejar datos como el catalogo de productos
+- HTML: Lenguaje de marcado utilizado para definir la estructura del codigo
+- CSS: Lenguaje de estilos utilizado para el apartado visual presentes en el codigo
+- Javascript: Lenguaje de programación utilizado para funciones y logica del proyecto
 
 ### Librerias y bibliotecas
--React: biblioteca de jasvascript para construir interfaces de usuario
--React Router DOM:biblioteca que facilita el enrutamiento (definir y anejar rutas)
--Axios: libreria de javascript para realizar operaciones HTTP
--Lucide React: libreria de iconos, para tener una interfaz mas amigable con el usuario
--React DOM: permite a React interacturar con paquetes DOM(Interfaz para HTML y XML) del navegador
+- React: biblioteca de jasvascript para construir interfaces de usuario
+- React Router DOM:biblioteca que facilita el enrutamiento (definir y anejar rutas)
+- Axios: libreria de javascript para realizar operaciones HTTP
+- Lucide React: libreria de iconos, para tener una interfaz mas amigable con el usuario
+- React DOM: permite a React interacturar con paquetes DOM(Interfaz para HTML y XML) del navegador
 
 ### Framework
--Boostrap: para diseño de las vistas
+- Boostrap: para diseño de las vistas
 
 ### Otras Herramientas
--ESLint: herramienta para identificar errores de sintaxis en el codigo, se instala junto a sus plugin "react hooks" y "react refresh"
--Vite: herramienta de construccion de proyectos Javascript, se utilizó junto a React para construir y compilar el codigo
+- ESLint: herramienta para identificar errores de sintaxis en el codigo, se instala junto a sus plugin "react hooks" y "react refresh"
+- Vite: herramienta de construccion de proyectos Javascript, se utilizó junto a React para construir y compilar el codigo
 ## Despliegue
 para facilitar la visualización de la página este codigo se encuentra desplegado en Vercel, para visualizar el FrontEnd debe ingresar al url https://pocketcenter.vercel.app/
-
-
-
-
-
-
-
 
 ## Ejecución local
 ### Repositorio
@@ -81,8 +71,6 @@ npm run dev
 ```
 esto entregara un link de localhost que debe colocarse en el navegador
 
-
-
 ## Desglose de Funcionalidades
 
 ### Carpetas del proyecto
@@ -91,7 +79,6 @@ esto entregara un link de localhost que debe colocarse en el navegador
 - src: incluye los archivos que dan funcionalidad a la página
 
 #### public
-- productos.json: catalogo de productos
 - vite.svg : logo de vite
 - assets: carpeta que contiene:
     - jpg: carpeta con imagenes jpg utilizadas en la pagina
@@ -110,8 +97,6 @@ Incluye las carpetas:
 Los siguientes arhivos se encuentran directamente en la carpeta raiz
 - eslint.config.js: configura el eslint
 - index.html: crea la aplicación e importa bootstrap
-- package-lock.json: se encarga de consistencia entre las instalaciones de las dependencias
-- package.json: define las dependencias del proyecto
 - vite.config.js: configura vite
 - README.md: este documento, donde se detalla el funcionamiento del frontend
 
@@ -153,29 +138,3 @@ En resumen, las funcionalidades implementadas fueron:
 - Implementar carrito de compras funcionalidades
 - Implementar pestaña de pagos con api de paypal
 - Añadir formulario de contacto
-## API Reference
-
-#### Get all items
-
-```http
-  GET /api/items
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
-#### Get item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
-
-#### add(num1, num2)
-
-Takes two numbers and returns the sum.
-
