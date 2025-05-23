@@ -9,9 +9,9 @@ Las herramientas utilizadas para el desarrollo de esta página web fueron las si
 
 ### Tecnologias:
 En este proyecto se hace uso de las siguientes técnologias:
-- HTML: Lenguaje de marcado utilizado para definir la estructura del codigo
-- CSS: Lenguaje de estilos utilizado para el apartado visual presentes en el codigo
-- Javascript: Lenguaje de programación utilizado para funciones y logica del proyecto
+- HTML: Lenguaje de marcado utilizado para definir la estructura del codigo.
+- CSS: Lenguaje de estilos utilizado para el apartado visual presentes en el codigo.
+- Javascript: Lenguaje de programación utilizado para funciones y logica del proyecto.
 
 ### Librerias y bibliotecas
 - React: biblioteca de jasvascript para construir interfaces de usuario
